@@ -11,7 +11,8 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
 # load environment variables
-load_dotenv(dotenv_path='.env.local')
+# load_dotenv(dotenv_path='.env.local')
+load_dotenv()
 
 # initialize pinecone
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
